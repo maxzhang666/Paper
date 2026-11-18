@@ -1,0 +1,16 @@
+services:
+  paper:
+    image: ghcr.io/maxzhang666/paper:latest
+    ports:
+      - "${PAPER_PORT:-25565}:25565"
+    environment:
+      EULA: "${EULA:-false}"
+      JAVA_TOOL_OPTIONS: "${JAVA_TOOL_OPTIONS:-}"
+    volumes:
+      - paper-data:/data
+    init: true
+    stop_grace_period: "${PAPER_STOP_GRACE_PERIOD:-5m}"
+    restart: unless-stopped
+
+volumes:
+  paper-data:
