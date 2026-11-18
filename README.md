@@ -23,22 +23,6 @@ Run the Paperclip jar directly from your server. Just like old times.
 * Documentation on using Paper: [docs.papermc.io](https://docs.papermc.io)
 * For a sneak peek at upcoming features, [see here](https://github.com/PaperMC/Paper/projects)
 
-### Docker
-
-The latest build of this repository is published as
-[`ghcr.io/maxzhang666/paper:latest`](https://github.com/maxzhang666/Paper/pkgs/container/paper).
-After reviewing and accepting the [Minecraft EULA](https://aka.ms/MinecraftEULA),
-start the server with the Compose file in `docker/`:
-
-```console
-EULA=true docker compose -f docker/compose.yaml up -d
-docker compose -f docker/compose.yaml logs -f
-```
-
-Server data is stored in the `paper-data` volume. Set `PAPER_PORT` to change the
-host port, or `JAVA_TOOL_OPTIONS` to provide JVM options. The `latest` image is
-rebuilt from `main` and published to GitHub Container Registry.
-
 How To (Plugin Developers)
 ------
 * See our API [here](paper-api)
