@@ -1,0 +1,8 @@
+**
+!docker/
+!docker/Dockerfile
+!docker/entrypoint.sh
+!paper-server/
+!paper-server/build/
+!paper-server/build/libs/
+!paper-server/build/libs/paper-paperclip-*.jar
